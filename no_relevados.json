@@ -1,0 +1,119 @@
+{
+	"NO_RELEVADO_0": {
+		"ID": "NO_RELEVADO_0",
+		"provincia": "Catamarca",
+		"no_relevado": true,
+		"localidad": "",
+		"departamento": "",
+		"nombre_barrio": "",
+		"poligono": ""
+	},
+	"NO_RELEVADO_2": {
+		"ID": "NO_RELEVADO_2",
+		"provincia": "Chubut",
+		"no_relevado": true,
+		"localidad": "",
+		"departamento": "",
+		"nombre_barrio": "",
+		"poligono": ""
+	},
+	"NO_RELEVADO_5": {
+		"ID": "NO_RELEVADO_5",
+		"provincia": "Entre Ríos",
+		"no_relevado": true,
+		"localidad": "",
+		"departamento": "",
+		"nombre_barrio": "",
+		"poligono": ""
+	},
+	"NO_RELEVADO_6": {
+		"ID": "NO_RELEVADO_6",
+		"provincia": "Formosa",
+		"no_relevado": true,
+		"localidad": "",
+		"departamento": "",
+		"nombre_barrio": "",
+		"poligono": ""
+	},
+	"NO_RELEVADO_7": {
+		"ID": "NO_RELEVADO_7",
+		"provincia": "Jujuy",
+		"no_relevado": true,
+		"localidad": "",
+		"departamento": "",
+		"nombre_barrio": "",
+		"poligono": ""
+	},
+	"NO_RELEVADO_8": {
+		"ID": "NO_RELEVADO_8",
+		"provincia": "La Pampa",
+		"no_relevado": true,
+		"localidad": "",
+		"departamento": "",
+		"nombre_barrio": "",
+		"poligono": ""
+	},
+	"NO_RELEVADO_9": {
+		"ID": "NO_RELEVADO_9",
+		"provincia": "La Rioja",
+		"no_relevado": true,
+		"localidad": "",
+		"departamento": "",
+		"nombre_barrio": "",
+		"poligono": ""
+	},
+	"NO_RELEVADO_10": {
+		"ID": "NO_RELEVADO_10",
+		"provincia": "Mendoza",
+		"no_relevado": true,
+		"localidad": "",
+		"departamento": "",
+		"nombre_barrio": "",
+		"poligono": ""
+	},
+	"NO_RELEVADO_15": {
+		"ID": "NO_RELEVADO_15",
+		"provincia": "San Juan",
+		"no_relevado": true,
+		"localidad": "",
+		"departamento": "",
+		"nombre_barrio": "",
+		"poligono": ""
+	},
+	"NO_RELEVADO_16": {
+		"ID": "NO_RELEVADO_16",
+		"provincia": "San Luis",
+		"no_relevado": true,
+		"localidad": "",
+		"departamento": "",
+		"nombre_barrio": "",
+		"poligono": ""
+	},
+	"NO_RELEVADO_17": {
+		"ID": "NO_RELEVADO_17",
+		"provincia": "Santa Cruz",
+		"no_relevado": true,
+		"localidad": "",
+		"departamento": "",
+		"nombre_barrio": "",
+		"poligono": ""
+	},
+	"NO_RELEVADO_19": {
+		"ID": "NO_RELEVADO_19",
+		"provincia": "Santiago del Estero",
+		"no_relevado": true,
+		"localidad": "",
+		"departamento": "",
+		"nombre_barrio": "",
+		"poligono": ""
+	},
+	"NO_RELEVADO_20": {
+		"ID": "NO_RELEVADO_20",
+		"provincia": "Tierra del Fuego",
+		"no_relevado": true,
+		"localidad": "",
+		"departamento": "",
+		"nombre_barrio": "",
+		"poligono": ""
+	}
+}

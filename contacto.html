@@ -1,0 +1,242 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="format-detection" content="telephone=no">
+<title>Techo</title>
+
+<!-- SET: FAVICON -->
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+<!-- END: FAVICON -->
+
+<!-- SET: STYLESHEET -->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link href="css/style_interna.css" rel="stylesheet" type="text/css" media="all">
+<link href="css/responsive_inst.css" rel="stylesheet" type="text/css" media="all">
+<!-- END: STYLESHEET -->
+
+<!-- SET: SCRIPTS -->
+  <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+		$(document).ready(function() {
+
+      $('.contact_form .submit_btn').click(function () {
+
+        $( document ).ajaxStart(function() {
+          $('.submit_btn').click(false);
+        });
+
+        var nombreField = document.getElementById('nombre');
+        var emailField = document.getElementById('email');
+
+        if(nombreField.value.length == 0 || emailField.value.length == 0){
+          $("#mensajeCamposObligatorios").show();
+          $("#nombre").addClass("fieldConBordeError");
+          $("#email").addClass("fieldConBordeError");
+        }else{
+          $("#mensajeCamposObligatorios").hide();
+          $('input.submit_btn').val('Espere por favor');          
+          $.ajax({
+            type: "POST",
+            url: "formulario/guardarDatosYMandarMail.php",
+            data: { 
+              nombre: $(".nombre").val(),
+              organizacion: $(".organizacion").val(),
+              telefono: $(".telefono").val(),
+              email: $(".email").val(),
+              mensaje: $(".mensaje").val() 
+            }
+          }).done(function(msg) {
+            if(msg == 'Pass'){
+              $("#mensajeDatosGuardadosCorrectamente").replaceWith('<div id="mensajeDatosGuardadosCorrectamente">Sus datos se han enviado correctamente</div>');
+              $("#mensajeDatosGuardadosCorrectamente").show();
+            }else{
+              //$("#mensajeDatosGuardadosCorrectamente").text() = 'sasa';
+              $("#mensajeDatosGuardadosCorrectamente").replaceWith('<div id="mensajeDatosGuardadosCorrectamente">No se han podido enviar sus datos porque el mail es incorrecto</div>');
+              $("#mensajeDatosGuardadosCorrectamente").show();
+            }
+            
+            //$('.submit_btn').click(true);
+            $('input.submit_btn').val('Enviado');
+
+          });   
+        
+        }
+
+    });
+    
+
+			$('nav').clone().appendTo('.mobile_menu');
+			$('.nav-icon').click(function(e) {
+				$(this).toggleClass('open');
+				$('body').toggleClass('menu_open');
+			});
+		});
+	</script>
+<!-- END: SCRIPTS -->
+</head>
+
+<body>
+
+
+
+<div class="mobile_menu"></div>
+<div class="overlay"></div>
+<!-- wrapper starts -->
+<div class="wrapper">
+    <!-- Header Starts -->
+    <header>
+    	<div class="nav-icon"><span></span><span></span><span></span></div>
+    	<div class="logo">
+        	<a href="contacto.html#"><img src="images/logo.png" width="93" height="25" alt="logo"></a>
+        </div>
+        <div class="social_icons">
+        	<ul>
+                <li><a href="https://www.facebook.com/TECHOargentina" target="_blank"></a></li>
+                <li><a href="https://twitter.com/TECHOarg" target="_blank" class="twt"></a></li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+        <nav>
+        	<ul>
+            	<li><a href="index.html">Mapa</a></li>
+             <li><a href="nosotros.html">¿Qué es TECHO?</a></li>
+             <li><a href="metodologia.html">Metodología</a></li>
+             <li><a href="proyectos.html">Proyectos</a></li>
+             <li><a href="prensa.html">Sala de Prensa</a></li>
+             <li><a href="contacto.html">Contacto</a></li>    
+            </ul>
+            <div class="clearfix"></div>
+        </nav>
+        <div class="clearfix"></div>
+    </header>
+    <!-- Header ends -->
+    <!-- banner Starts -->
+    <div class="banner banner_3">
+        <div class="banner_cnt">
+        	<div class="banner_text">
+            	<div class="banner_text_cnt">
+                	<div class="container">
+                    	<div class="row">
+                        	<figure><img src="images/banner_text_3.png" width="445" height="69" alt="banner_text"></figure>
+                            <p>Déjenos su mensaje <br>o pregunta aquí.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner Ends -->
+    <!-- maincontent Starts -->
+
+    <div class="main_content">
+       	<div class="contact_form">
+        	<div class="container">
+            	<div class="row">
+                	<div class="contact_form_cnt">
+                    <div class="balance_icon balance_icon_3">
+                      <figure><img src="images/swing_img.png" width="69" height="67" alt="balance_img"></figure>
+                    </div>
+                    <div class="systemMessages">
+                      <div id="mensajeCamposObligatorios" style="display: none;">Por favor complete los campos obligatorios</div>
+                      <div id="mensajeDatosGuardadosCorrectamente" style="display: none;">Sus datos se han enviado correctamente</div>
+                    </div>                    
+                  	<div class="contact_form_lft">    
+                      <ul>
+                      	<li><input name="text_field" type="text" id="nombre" class="text_field nombre" placeholder="Nombre Completo*"></li>
+                        <li><input name="text_field" type="text" id="organizacion" class="text_field organizacion" placeholder="Organización (Opcional)"></li>
+                        <li><input name="text_field" type="text" id="telefono" class="text_field telefono" placeholder="Teléfono (Opcional)"></li>
+                        <li><input name="text_field" type="email" id="email" class="text_field email" placeholder="E-mail*"></li>
+                        <li><p>(*) Campos obligatorios</p></li>
+                      </ul>
+                      <div class="clearfix"></div>
+                    </div>
+                      <div class="contact_form_rgt">
+                      	<textarea name="text_field" id="mensaje" class="text_area mensaje" placeholder="Mensaje… (Opcional)"></textarea>
+                          <input name="text_field" type="button" value="Enviar" class="submit_btn">
+                      </div>
+                      <div class="clearfix"></div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- aincontent ends -->
+
+    <!-- footer starts -->
+    <footer>
+    	<div class="container">
+        	<div class="row">
+            	<div class="footer_in">
+                    <div class="footer_lft">
+                        <div class="footer_logo">
+                            <a href="contacto.html#"><img src="images/footer_logo.png" width="83" height="22" alt="footer_logo"></a>
+                        </div>
+                        <a href="contacto.html#">techo.org.ar</a>
+                    </div>
+                    <div class="footer_rgt">
+                        <div class="footer_icons">
+                            <ul>
+                                <li><a href="https://www.facebook.com/TECHOargentina" target="_blank"></a></li>
+                                <li><a href="https://twitter.com/TECHOarg" target="_blank" class="twt"></a></li>
+                                <div class="winguLogo"><a href="http://www.winguweb.org" target='_blank'><img src="images/text1.png" width="150px"></img></a></div>
+
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <div class="footer_mid">
+                        <div class="address">
+                            <ul>
+                                <li><p>Entre Ríos 258, 2D</p></li>
+                                <li><p>(+5411) 4519-8349 811-4296</p></li>
+                                <li><p>Capital Federal Buenos Aires</p></li>
+                                <li><a href="cdn-cgi/l/email-protection.html#385b514b16594a5f5d564c515659784c5d5b505716574a5f"><span class="__cf_email__" data-cfemail="ff9c968cd19e8d989a918b96919ebf8b9a9c9790d1908d98">[email&#160;protected]</span><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script></a></li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <p>Accede a los términos y condiciones del uso del relevamiento <a class="linkAcaFooter" href="terminos.html">acá</a>.</p>
+                    </div>
+
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer ends -->
+</div>
+<!-- wrapper ends -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-34465558-15', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '579121888908254', {
+em: 'insert_email_variable,'
+});
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=579121888908254&ev=PageView&noscript=1"
+/></noscript>
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code -->
+<script type="text/javascript">/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script></body>
+</html>

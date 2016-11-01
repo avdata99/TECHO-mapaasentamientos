@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="format-detection" content="telephone=no">
+<title>Techo</title>
+
+<!-- SET: FAVICON -->
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+<!-- END: FAVICON -->
+
+<!-- SET: STYLESHEET -->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link href="css/style_interna.css" rel="stylesheet" type="text/css" media="all">
+<link href="css/responsive_inst.css" rel="stylesheet" type="text/css" media="all">
+<!-- END: STYLESHEET -->
+
+<!-- SET: SCRIPTS -->
+  <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+      $('nav').clone().appendTo('.mobile_menu');
+      $('.nav-icon').click(function(e) {
+        $(this).toggleClass('open');
+        $('body').toggleClass('menu_open');       
+      });
+      footerheight();
+    function footerheight(){
+      var f_hgt = $('footer').height();
+      $('.push').height(f_hgt);
+      $('.wrapper').css({'margin-bottom': -f_hgt + 'px'});
+    }
+    $(window).load(function(e) {
+            footerheight();
+        });
+    
+    $(window).resize(function(e) {
+            footerheight();
+        });
+    });
+  </script>
+<!-- END: SCRIPTS -->
+</head>
+
+<body>
+<div class="mobile_menu"></div>
+<div class="overlay"></div>
+<!-- wrapper starts -->
+<div class="wrapper">
+    <!-- Header Starts -->
+    <header>  
+      <div class="nav-icon"><span></span><span></span><span></span></div>      
+      <div class="logo">
+          <a href="metodologia.html#"><img src="images/logo.png" width="93" height="25" alt="logo"></a>
+        </div>
+        <div class="social_icons">
+          <ul>
+              <li><a href="https://www.facebook.com/TECHOargentina" target="_blank"></a></li>
+              <li><a href="https://twitter.com/TECHOarg" target="_blank" class="twt"></a></li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+        <nav>
+          <ul>
+             <li><a href="index.html">Mapa</a></li>
+             <li><a href="nosotros.html">¿Qué es TECHO?</a></li>
+             <li><a href="metodologia.html">Metodología</a></li>
+             <li><a href="proyectos.html">Proyectos</a></li>
+             <li><a href="prensa.html">Sala de Prensa</a></li>
+             <li><a href="contacto.html">Contacto</a></li>          
+              
+            </ul>
+            <div class="clearfix"></div>
+        </nav>
+        <div class="clearfix"></div>          
+    </header> 
+    <!-- Header ends -->
+    <!-- banner Starts -->
+    <div class="banner">      
+        <div class="banner_cnt">
+          <div class="banner_text">
+              <div class="banner_text_cnt">
+                  <div class="container">
+                      <div class="row">
+                          <figure><img src="images/banner_text_1.png" width="373" height="161" alt="banner_text"></figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+    <!-- banner Ends -->
+    <!-- maincontent Starts -->
+    <div class="main_content">
+      <div class="methodology">
+          <div class="container">
+              <div class="row">
+                  <div class="balance_icon balance_icon_1">
+                        <figure><img src="images/plant_img.png" width="155" height="85" alt="balance_img"></figure>
+                    </div>
+                  <div class="methodology_in">
+                      <h2>Metodología utilizada</h2>
+                      <p>Para abordar los objetivos propuestos por el Relevamiento, se opta por una estrategia metodológica cuantitativa. El universo de estudio estará compuesto por todos los asentamientos informales existentes en las provincias de Buenos Aires y Córdoba, los territorios de Gran Corrientes, Gran Resistencia, las ciudades de Oberá, El Dorado, San Vicente y Departamento Capital en Misiones, Alto Valle de Neuquén, Río Negro y las ciudades de Cutral Có y Plaza Huincul de Neuquén, las ciudades de Orán, Rosario de la Frontera, Tartagal y Gran Salta, Área Metropolitana de Rosario, San Miguel de Tucumán y la Ciudad Autónoma de Buenos Aires (CABA)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="analysis">
+          <div class="container">
+              <div class="row">
+                  <div class="analysis_in">
+                      <h4>Unidad de análisis</h4>
+                        <p>La unidad de análisis de la presente investigación es el asentamiento informal. TECHO define al asentamiento como un conjunto de un mínimo de ocho familias agrupadas o contiguas, en donde más de la mitad de la población no cuenta con título de propiedad del suelo, ni acceso regular a al menos dos de los servicios básicos: agua corriente, energía eléctrica con medidor domiciliario y/o sistema de eliminación de excretas a través de la red cloacal formal. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="data_block">
+          <div class="container">
+              <div class="row">
+                  <div class="data_block_in methodology_in">
+                    <div class="running">
+                      <figure><img src="images/running_icon.png" width="56" height="51" alt="running_icon"></figure>
+                    </div>
+                        <h2>Instrumento de recolección de datos</h2>
+                        <p>Como en el 2013, en el RAI 2016 se continuó utilizando una ficha estructurada (encuesta) orientada a relevar características socio-urbanas de los asentamientos informales, así como su localización geográfica. Al igual que en años anteriores, el instrumento fue construido junto a expertos1 en la generación de herramientas de esta naturaleza y en la dinámica urbana de asentamientos informales. 
+El levantamiento de información fue realizado por encuestadores -personas contratadas y voluntarios capacitados, con experiencia territorial y oriundos de cada localidad relevada- que recorrieron todo el territorio, detectando los asentamientos informales y entrevistando a los referentes comunitarios/informantes claves, quienes proporcionaron la información de cada asentamiento. </p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="container">
+              <div class="row">
+                  <div class="data_block_in methodology_in">
+                        <h2>Consideraciones sobre el método para el análisis de cambios</h2>
+                        <p>Esta investigación además tiene como objetivo dar indicios de las dinámicas territoriales que sucedieron entre el último Relevamiento de Asentamientos Informales en el año 2013 y los resultados del 2016. Esto implica, detectar los cambios en cuanto al acceso a la infraestructura urbana: la formalización del acceso a los servicios básicos; la extensión del alumbrado público; el asfaltado en las calle; la mejora en el servicio de recolección de basura, entre otros.
+
+                        Por este motivo, resultó necesario establecer tipologías para poder explicar las dinámicas durante el período julio 2013-mayo 2016:
+
+                        <p>A. <b>Barrios Nuevos:</b> aquellos que se conformaron posterior a julio 2013.</p>
+                        <p>B. <b>Barrios relevados en 2013 y 2016:</b> barrios que fueron relevados tanto en el año 2013 y el 2016, y mantienen la generalidad de sus características (sin superar los dos servicios básicos, ni la tenencia de la tierra). </p>
+                        <p>C. <b>Barrios que sufrieron un proceso de unificación o división interna:</b> esta tipología tiene que ver con los procesos de identificación y sentido de pertenencia en los asentamientos informales. </p>
+                        <p>D. <b>Barrios que ya no responden a la definición de asentamiento informal del estudio:</b> significa que ya no cumplen con los criterios de la definición operativa de TECHO para asentamiento informal. Esto puede ocurrir porque la mayoría de las familias accedieron, por lo menos, a dos servicios básicos, porque fueron relocalizados, desalojados o viven menos de ocho familias. </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="container">
+              <div class="row">
+                  <div class="data_block_in methodology_in">
+                        <h2>Proceso de control de calidad</h2>
+                        <p>Una de las innovaciones importantes de este relevamiento es el <b>proceso de control de calidad.</b> Su objetivo principal fue auditar y monitorear el trabajo de TECHO en las diferentes etapas del proyecto con el fin de velar por la calidad y excelencia de la información relevada y asegurar un proceso sistemático y estandarizado de control de calidad. </p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+        </div>        
+    </div>
+    <!-- aincontent ends -->
+    <div class="push"></div>
+</div>
+<!-- wrapper ends -->
+
+    <!-- footer starts -->
+    <footer>
+      <div class="container">
+          <div class="row">
+              <div class="footer_in">
+                    <div class="footer_lft">
+                        <div class="footer_logo">
+                            <a href="metodologia.html#"><img src="images/footer_logo.png" width="83" height="22" alt="footer_logo"></a>
+                        </div>
+                        <a href="metodologia.html#">techo.org.ar</a>
+                    </div>
+                    <div class="footer_rgt">
+                        <div class="footer_icons">
+                            <ul>
+                                <li><a href="https://www.facebook.com/TECHOargentina" target="_blank"></a></li>
+                                <li><a href="https://twitter.com/TECHOarg" target="_blank" class="twt"></a></li>
+                                <div class="winguLogo"><a href="http://www.winguweb.org" target='_blank'><img src="images/text1.png" width="150px"></img></a></div>
+                                
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <div class="footer_mid">
+                        <div class="address">
+                            <ul>
+                                <li><p>Entre Ríos 258, 2D</p></li>
+                                <li><p>(+5411) 4519-8349 811-4296</p></li>
+                                <li><p>Capital Federal Buenos Aires</p></li>
+                                <li><a href="cdn-cgi/l/email-protection.html#0d6e647e236c7f6a68637964636c4d79686e656223627f6a"><span class="__cf_email__" data-cfemail="412228326f203326242f35282f2001352422292e6f2e3326">[email&#160;protected]</span><script data-cfhash='f9e31' type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script></a></li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <p>Accede a los términos y condiciones del uso del relevamiento <a class="linkAcaFooter" href="terminos.html">acá</a>.</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer ends -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-34465558-15', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '579121888908254', {
+em: 'insert_email_variable,'
+});
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=579121888908254&ev=PageView&noscript=1"
+/></noscript>
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code -->
+<script type="text/javascript">/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script></body>
+</html>
